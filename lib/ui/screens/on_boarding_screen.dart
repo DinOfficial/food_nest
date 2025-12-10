@@ -1,10 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:food_nest/ui/screens/login_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-import '../screens/skeleton_screen.dart';
+import 'skeleton_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -19,7 +20,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   final GlobalKey<IntroductionScreenState> _introKey = GlobalKey<IntroductionScreenState>();
 
   void _onIntroEnd(BuildContext context) {
-    Navigator.pushNamedAndRemoveUntil(context, SkeletonScreen.name, (p) => false);
+    Navigator.pushNamedAndRemoveUntil(context, LoginScreen.name, (p) => false);
   }
 
   List<PageViewModel> onGetPages() {
@@ -196,7 +197,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             textStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
-        next: Icon(Icons.arrow_circle_right, color: Colors.white, size: 24),
+        next: Icon(Icons.arrow_forward_ios, color: Colors.white, size: 24),
         done: Text(
           'Got Started',
           style: GoogleFonts.lato(
