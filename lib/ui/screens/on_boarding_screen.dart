@@ -5,7 +5,7 @@ import 'package:food_nest/ui/screens/login_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-import 'skeleton_screen.dart';
+import 'category_services_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});

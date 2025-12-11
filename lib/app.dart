@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:food_nest/ui/screens/layout_screen.dart';
 import 'package:food_nest/ui/screens/login_screen.dart';
 import 'package:food_nest/ui/screens/on_boarding_screen.dart';
-import 'package:food_nest/ui/screens/skeleton_screen.dart';
+import 'package:food_nest/ui/screens/otp_verify_screen.dart';
+import 'package:food_nest/ui/screens/sign_up_screen.dart';
+import 'package:food_nest/ui/screens/category_services_screen.dart';
 import 'package:food_nest/ui/screens/splash_screen.dart';
 
 class FoodNestApp extends StatefulWidget {
@@ -39,8 +42,11 @@ class _FoodNestAppState extends State<FoodNestApp> {
       routes: {
         SplashScreen.name: (_) => SplashScreen(),
         OnBoardingScreen.name: (_)=> OnBoardingScreen(),
-        SkeletonScreen.name:(_)=>SkeletonScreen(),
+        CategoryServicesScreen.name:(_)=>CategoryServicesScreen(),
         LoginScreen.name:(_)=>LoginScreen(),
+        SignUpScreen.name: (_)=>SignUpScreen(),
+        OtpVerifyScreen.name:(_)=>OtpVerifyScreen(),
+        LayoutScreen.name:(_)=>LayoutScreen(),
       },
     );
   }

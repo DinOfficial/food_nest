@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+
+class LayoutScreen extends StatefulWidget {
+  const LayoutScreen({super.key});
+  static String name = 'layout';
+
+  @override
+  State<LayoutScreen> createState() => _LayoutScreenState();
+}
+
+class _LayoutScreenState extends State<LayoutScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}

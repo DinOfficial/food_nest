@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:food_nest/ui/screens/sign_up_screen.dart';
-import 'package:food_nest/ui/screens/category_services_screen.dart';
+import 'package:food_nest/ui/screens/login_screen.dart';
+import 'package:food_nest/ui/screens/otp_verify_screen.dart';
 import 'package:food_nest/ui/widgets/sub_heading.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/heading_text.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
-  static String name = 'login';
+  static String name = 'sign-up';
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   bool _isShowPassword = false;
 
   @override
@@ -30,16 +30,26 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: .center,
             children: [
               const SizedBox(height: 100),
-              HeadingText(title: 'Welcome Back !'),
+              HeadingText(title: 'Create a new account !'),
               const SizedBox(height: 8),
-              SubHeading(title: 'Please login your account'),
+              SubHeading(title: 'Please fill in the form to continue'),
               const SizedBox(height: 80),
-              TextFormField(decoration: InputDecoration(hintText: 'Write you email')),
+              TextFormField(decoration: InputDecoration(hintText: 'Full name')),
+              const SizedBox(height: 16),
+              TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(hintText: 'Email'),
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                keyboardType: TextInputType.phone,
+                decoration: InputDecoration(hintText: 'Phone number'),
+              ),
               const SizedBox(height: 16),
               TextFormField(
                 obscureText: !_isShowPassword,
                 decoration: InputDecoration(
-                  hintText: 'Write you password',
+                  hintText: 'Password',
                   suffixIcon: IconButton(
                     onPressed: () {
                       setState(() {
@@ -56,14 +66,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 52,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, CategoryServicesScreen.name);
+                    Navigator.pushNamed(context, OtpVerifyScreen.name);
                   },
-                  child: Text('Login', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
+                  child: Text('Sign Up', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16)),
                 ),
               ),
               const SizedBox(height: 16),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+
+                },
                 child: Row(
                   mainAxisAlignment: .center,
                   crossAxisAlignment: .center,
@@ -71,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Image.asset('assets/images/g_logo.png', width: 20, height: 20),
                     const SizedBox(width: 8),
                     Text(
-                      'Login with Google',
+                      'Sign up with Google',
                       style: GoogleFonts.lato(fontSize: 14, color: Colors.white),
                     ),
                   ],
@@ -83,15 +95,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 crossAxisAlignment: .center,
                 children: [
                   Text(
-                    'Don\'t have an account?',
+                    'Have an account?',
                     style: GoogleFonts.lato(fontSize: 14, color: Colors.white),
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, SignUpScreen.name);
+                      Navigator.pushNamed(context, LoginScreen.name);
                     },
                     child: Text(
-                      'Sign Up',
+                      'Log In',
                       style: GoogleFonts.lato(fontSize: 14, color: Colors.red),
                     ),
                   ),
