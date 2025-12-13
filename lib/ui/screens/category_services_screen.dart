@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/category_services_select_card.dart';
-import 'layout_screen.dart';
+import 'order_food_home_screen.dart';
 
 class CategoryServicesScreen extends StatefulWidget {
   const CategoryServicesScreen({super.key});
@@ -31,7 +31,7 @@ class _CategoryServicesScreenState extends State<CategoryServicesScreen> {
                   img:
                       'https://media.istockphoto.com/id/611071834/vector/hand-holding-smartphone-with-pizza-cola-and-chicken.jpg?s=612x612&w=0&k=20&c=kVrZ2STwc4qfoVI5JyQd_evaPNagE-5N3T6flFCOs-A=',
                   onTap: () {
-                    Navigator.pushNamed(context, LayoutScreen.name);
+                    Navigator.pushNamed(context, OrderFoodHomeScreen.name);
                   },
                 ),
                 CategoryServicesCardSelect(
@@ -43,13 +43,13 @@ class _CategoryServicesScreenState extends State<CategoryServicesScreen> {
                 CategoryServicesCardSelect(
                   title: 'RESERVE TABLE',
                   img:
-                      'https://www.fluentu.com/blog/wp-content/uploads/site//2/ordering-food-in-spanish-2.jpg',
+                      'https://artemisgrill.com.sg/wp-content/uploads/sites/3/2024/11/Christmas-Artemis-Homepage-10-1-1024x576.jpg',
                   onTap: () {},
                 ),
                 CategoryServicesCardSelect(
                   title: 'FOOD PLANNER',
                   img:
-                      'https://www.cmu.edu/dietrich/news/news-stories/2016/july/images/online-ordering_900x600.jpg',
+                      'https://blog.resy.com/wp-content/uploads/2025/01/Jade-Rabbit_cover-800x450.jpg',
                   onTap: () {},
                 ),
                 CategoryServicesCardSelect(

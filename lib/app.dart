@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_nest/ui/screens/layout_screen.dart';
+import 'package:food_nest/ui/screens/order_food_home_screen.dart';
 import 'package:food_nest/ui/screens/login_screen.dart';
 import 'package:food_nest/ui/screens/on_boarding_screen.dart';
 import 'package:food_nest/ui/screens/otp_verify_screen.dart';
@@ -46,7 +46,7 @@ class _FoodNestAppState extends State<FoodNestApp> {
         LoginScreen.name:(_)=>LoginScreen(),
         SignUpScreen.name: (_)=>SignUpScreen(),
         OtpVerifyScreen.name:(_)=>OtpVerifyScreen(),
-        LayoutScreen.name:(_)=>LayoutScreen(),
+        OrderFoodHomeScreen.name:(_)=>OrderFoodHomeScreen(),
       },
     );
   }
