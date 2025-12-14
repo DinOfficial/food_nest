@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
-import '../widgets/foon_nest_app_bar.dart';
+import '../widgets/food_nest_app_bar.dart';
 
 class OrderFoodHomeScreen extends StatefulWidget {
   const OrderFoodHomeScreen({super.key});
