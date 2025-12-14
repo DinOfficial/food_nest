@@ -31,7 +31,7 @@ class _CategoryServicesScreenState extends State<CategoryServicesScreen> {
                   img:
                       'https://media.istockphoto.com/id/611071834/vector/hand-holding-smartphone-with-pizza-cola-and-chicken.jpg?s=612x612&w=0&k=20&c=kVrZ2STwc4qfoVI5JyQd_evaPNagE-5N3T6flFCOs-A=',
                   onTap: () {
-                    Navigator.pushNamed(context, OrderFoodHomeScreen.name);
+                    Navigator.pushNamedAndRemoveUntil(context, OrderFoodHomeScreen.name, (p)=>false);
                   },
                 ),
                 CategoryServicesCardSelect(
