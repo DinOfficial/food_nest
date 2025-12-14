@@ -14,7 +14,7 @@ class CategoryServicesCardSelect extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: 220,
-        width: 180,
+        width: MediaQuery.of(context).size.width *.4,
         decoration: BoxDecoration(color: Colors.blueGrey, borderRadius: BorderRadius.circular(20)),
         child: Stack(
           children: [
@@ -27,7 +27,7 @@ class CategoryServicesCardSelect extends StatelessWidget {
               left: 0,
               child: Container(
                 height: 40,
-                width: 180,
+                width:  MediaQuery.of(context).size.width *.4,
                 decoration: BoxDecoration(
                   color: Colors.red,
                   borderRadius: BorderRadius.only(
