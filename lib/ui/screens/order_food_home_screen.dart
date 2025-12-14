@@ -78,17 +78,18 @@ class _OrderFoodHomeScreenState extends State<OrderFoodHomeScreen> {
           ),
           const SizedBox(height: 4),
           SizedBox(
-            height: 12,
+            height: 16,
             child: Row(
               mainAxisAlignment: .center,
               children: List.generate(carouselImageList.length, (index) {
                 return AnimatedContainer(
                   duration: Duration(milliseconds: 300),
-                  height: 7,
-                  width: _currentIndex == index ? 16 : 7,
+                  height: _currentIndex == index ? 16 : 10,
+                  width: _currentIndex == index ? 16 : 10,
                   margin: EdgeInsets.symmetric(horizontal: 4),
                   decoration: BoxDecoration(
                     color: _currentIndex == index ? Colors.white : Colors.white54,
+                    borderRadius: BorderRadius.circular(40),
                   ),
                 );
               }),
